@@ -13,23 +13,13 @@ const init = () => {
         g$(go.Panel, "Vertical", {}, 
            
            g$(go.Panel, 'Horizontal', {}, 
-              g$(go.TextBlock,{margin:5, editable: true}, new go.Binding("text", "key")),
+              g$(go.TextBlock,{editable: true}, new go.Binding("text", "key")),
               g$('Button', {click:()=>{}}, g$(go.TextBlock, 'X'))
              ),
-             
+
            g$('Button', g$(go.TextBlock, '+'))
           )
       );
   
   myDiagram.model = new go.GraphLinksModel(nodes, links);
 };
-
-//替代 jQuery 的 $(document).ready(init)
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    document.removeEventListener("DOMContentLoaded", arguments.callee, false);
-    init();
-  },
-  false
-);
