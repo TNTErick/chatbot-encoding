@@ -10,11 +10,15 @@ body {
     margin: 0;
 }
 
+.logo {
+    font-family: 'Montserrat';
+}
+
 .navbar {
     width: 100%;
     background-color: #7be0e0;
-    font-family: 'Montserrat';
     height: max-content;
+    font-family: 'Montserrat';
 }
 
 .navbar *{
